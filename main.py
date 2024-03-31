@@ -1,11 +1,8 @@
-import dotenv
 from crewai import Crew, Process
 from langchain_community.tools import DuckDuckGoSearchRun
 
 import agents
 import tasks
-
-dotenv.load_dotenv()
 
 
 def main(topic):

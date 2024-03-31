@@ -1,4 +1,12 @@
 from crewai import Agent
+from langchain_community.chat_models import BedrockChat
+
+
+llm = BedrockChat(
+    credentials_profile_name=None,
+    region_name="us-east-1",
+    model_id="anthropic.claude-3-sonnet-20240229-v1:0",
+)
 
 
 # Creating a senior researcher agent with memory and verbose mode
@@ -13,6 +21,7 @@ def create_senior_researcher(topic, tools):
     the world.""",
         tools=tools,
         allow_delegation=True,
+        llm=llm,
     )
 
 
@@ -28,4 +37,5 @@ def create_writer(topic, tools):
     discoveries to light in an accessible manner.""",
         tools=tools,
         allow_delegation=False,
+        llm=llm,
     )
