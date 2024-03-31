@@ -5,6 +5,7 @@ This is a simple example of how to use the CrewAI with bedrock.
 # Prerequisites
 
 - AWS CLI already configured with Administrator permission
+- Enable Claude3 Sonnet on AWS Bedrock
 - Python 3.12+
 
 # Setup
